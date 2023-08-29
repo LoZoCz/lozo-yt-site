@@ -11,7 +11,7 @@ export const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/lozo-yt-site" element={<Home />} />
         <Route path="/video/:id" element={<VideoDetails />} />
         <Route path="/channel/:id" element={<ChannelDetails />} />
         <Route path="/search/:searchTerm" element={<SearchFeed />} />
