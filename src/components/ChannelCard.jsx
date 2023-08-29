@@ -10,7 +10,7 @@ export const ChannelCard = ({ channelDetail }) => {
   return (
     <Link
       to={
-        location.pathname === "/"
+        location.pathname === "/lozo-yt-site"
           ? `/channel/${channelDetail?.id?.channelId}`
           : ""
       }
