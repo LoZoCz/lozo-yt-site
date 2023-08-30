@@ -12,9 +12,12 @@ export const App = () => {
       <Navbar />
       <Routes>
         <Route path="/lozo-yt-site" element={<Home />} />
-        <Route path="/video/:id" element={<VideoDetails />} />
-        <Route path="/channel/:id" element={<ChannelDetails />} />
-        <Route path="/search/:searchTerm" element={<SearchFeed />} />
+        <Route path="/lozo-yt-site/video/:id" element={<VideoDetails />} />
+        <Route path="/lozo-yt-site/channel/:id" element={<ChannelDetails />} />
+        <Route
+          path="/lozo-yt-site/search/:searchTerm"
+          element={<SearchFeed />}
+        />
       </Routes>
     </Router>
   );

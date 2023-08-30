@@ -17,7 +17,7 @@ export const VideoCard = ({
   // console.log(snippet);
   return (
     <Link
-      to={videoId ? `/video/${videoId}` : demoVideoUrl}
+      to={videoId ? `/lozo-yt-site/video/${videoId}` : demoVideoUrl}
       className="flex flex-col"
     >
       <div className="img-box w-full h-3/5">

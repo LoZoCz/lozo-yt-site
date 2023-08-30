@@ -51,7 +51,7 @@ export const VideoDetails = () => {
           <h1 className=" text-3xl font-bold">{title}</h1>
           <div className="flex justify-between items-center ">
             <Link
-              to={`/channel/${channelId}`}
+              to={`/lozo-yt-site/channel/${channelId}`}
               className="hover:underline transition-all"
             >
               {channelTitle}{" "}

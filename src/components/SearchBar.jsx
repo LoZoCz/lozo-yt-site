@@ -12,7 +12,7 @@ export const SearchBar = () => {
     e.preventDefault();
 
     if (searchTerm) {
-      navigate(`/search/${searchTerm}`);
+      navigate(`/lozo-yt-site/search/${searchTerm}`);
       setSearchTerm("");
     }
   };
