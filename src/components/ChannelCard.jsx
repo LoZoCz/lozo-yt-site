@@ -32,7 +32,7 @@ export const ChannelCard = ({ channelDetail }) => {
           channelDetail?.snippet?.channelTitle ||
           channelDetail?.snippet?.localized?.title
         }
-        className="w-1/2 aspect-square rounded-full"
+        className="w-64 aspect-square rounded-full"
       />
       <h1 className="text-center text-2xl font-semibold">
         {channelDetail?.snippet?.channelTitle ||
@@ -41,7 +41,7 @@ export const ChannelCard = ({ channelDetail }) => {
         <FontAwesomeIcon icon={faCheckCircle} className="text-sm" />
       </h1>
       {channelDetail?.statistics?.subscriberCount && (
-        <p>
+        <p className="text-center">
           {parseInt(
             channelDetail?.statistics?.subscriberCount,
           ).toLocaleString()}{" "}

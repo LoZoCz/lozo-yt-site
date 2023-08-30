@@ -35,8 +35,11 @@ export const VideoDetails = () => {
   return (
     <main className="flex flex-col px-2 pb-2 gap-4 bg-neutral-900 text-white relative md:flex-row">
       <div
-        className="static top-16 w-full grid md:sticky md:w-4/5"
-        style={{ gridTemplateRows: `1fr 6.5rem`, height: `calc(100vh - 6rem)` }}
+        className="static top-16 w-full grid md:sticky md:w-3/4"
+        style={{
+          gridTemplateRows: `1fr 7rem`,
+          height: `calc(100vh - 6rem)`,
+        }}
       >
         <div className="w-full">
           <ReactPlayer
@@ -48,8 +51,8 @@ export const VideoDetails = () => {
           />
         </div>
         <div className="flex gap-4 flex-col mt-4">
-          <h1 className=" text-3xl font-bold">{title}</h1>
-          <div className="flex justify-between items-center ">
+          <h1 className=" text-xl font-bold md:text-3xl">{title}</h1>
+          <div className="flex justify-between items-center text-sm md:text-m">
             <Link
               to={`/lozo-yt-site/channel/${channelId}`}
               className="hover:underline transition-all"
@@ -64,7 +67,7 @@ export const VideoDetails = () => {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/5">
+      <div className="w-full md:w-1/4">
         <Videos videos={videos} columns={1} recommended={1} />
       </div>
     </main>

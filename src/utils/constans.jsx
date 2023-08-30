@@ -13,12 +13,14 @@ import {
   faFaceKissWinkHeart,
   faMasksTheater,
   faBitcoinSign,
+  faFlag,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
   { name: "New", icon: <FontAwesomeIcon icon={faHouse} /> },
+  { name: "Poland", icon: <FontAwesomeIcon icon={faFlag} /> },
   { name: "Coding", icon: <FontAwesomeIcon icon={faCode} /> },
   { name: "ReactJS", icon: <FontAwesomeIcon icon={faCode} /> },
   { name: "NextJS", icon: <FontAwesomeIcon icon={faCode} /> },

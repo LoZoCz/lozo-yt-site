@@ -34,7 +34,7 @@ export const ChannelDetails = () => {
       >
         <ChannelCard channelDetail={channelDetail} />
       </div>
-      <Videos videos={channelVidoes} padding="8rem" columns={4} />
+      <Videos videos={channelVidoes} padding="4rem" columns={4} />
     </main>
   );
 };
