@@ -1,7 +1,22 @@
 import PropTypes from "prop-types";
 import { VideoCard } from "./VideoCard";
 import { ChannelCard } from "./ChannelCard";
-export const Videos = ({ videos, padding, columns }) => {
+import { useState, useEffect } from "react";
+export const Videos = ({ videos, padding, columns, recommended }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    console.log(windowWidth, columns);
+    // Oczyść nasłuchiwanie przy wyjściu z komponentu
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   if (!videos?.length) return "Loading...";
 
   return (
@@ -10,7 +25,15 @@ export const Videos = ({ videos, padding, columns }) => {
       className="grid gap-6"
       style={{
         paddingInline: `${padding}`,
-        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+        gridTemplateColumns: `repeat(${
+          recommended
+            ? windowWidth > 760
+              ? columns
+              : columns + 1
+            : windowWidth > 760
+            ? columns
+            : columns - 2
+        }, minmax(0, 1fr))`,
       }}
     >
       {videos.map((item, idx) =>
@@ -35,4 +58,5 @@ Videos.propTypes = {
   videos: PropTypes.array,
   padding: PropTypes.string,
   columns: PropTypes.number,
+  recommended: PropTypes.number,
 };

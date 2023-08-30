@@ -10,13 +10,18 @@ export const ChannelCard = ({ channelDetail }) => {
   return (
     <Link
       to={
-        location.pathname === "/lozo-yt-site/"
+        location.pathname === "/lozo-yt-site/" ||
+        location.pathname === "/lozo-yt-site"
           ? `/lozo-yt-site/channel/${channelDetail?.id?.channelId}`
           : ""
       }
       className="flex justify-center items-center flex-col gap-4"
       style={{
-        cursor: location.pathname === "/lozo-yt-site/" ? "pointer" : "auto",
+        cursor:
+          location.pathname === "/lozo-yt-site/" ||
+          location.pathname === "/lozo-yt-site"
+            ? "pointer"
+            : "auto",
       }}
     >
       <img
@@ -29,7 +34,7 @@ export const ChannelCard = ({ channelDetail }) => {
         }
         className="w-1/2 aspect-square rounded-full"
       />
-      <h1 className="text-2xl font-semibold">
+      <h1 className="text-center text-2xl font-semibold">
         {channelDetail?.snippet?.channelTitle ||
           channelDetail?.snippet?.localized?.title ||
           demoChannelTitle}{" "}

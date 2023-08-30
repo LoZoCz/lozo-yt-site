@@ -16,6 +16,10 @@ body {
   height: 100%;
 }
 
+.sidebar::-webkit-scrollbar {
+  height: 0.35rem;
+}
+
 ::-webkit-scrollbar {
   width: 0.75rem; /* Szerokość scrollbaru */
   background-color: rgb(23 23 23);

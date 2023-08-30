@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 export const SideBar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <section
-      className="flex flex-col gap-2 justify-center h-fit items-center p-4 border-neutral-800 border-r-2 border-solid sticky"
+      className="sidebar flex flex-row gap-2 h-fit items-center px-2 lg:p-4 border-neutral-800 border-r-2 border-solid lg:sticky bg-neutral-900 overflow-x-scroll lg:flex-col"
       style={{ top: "5rem" }}
     >
       {categories.map((btn, i) => {

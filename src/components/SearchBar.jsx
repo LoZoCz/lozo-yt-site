@@ -21,7 +21,7 @@ export const SearchBar = () => {
       <input
         type="text"
         placeholder="Search..."
-        className="border-none outline-none rounded-full px-3 py-1 font-roboto text-lg w-96"
+        className="border-none outline-none rounded-full px-3 py-1 font-roboto text-lg w-48 lg:w-96 "
         value={searchTerm}
         onChange={(e) => {
           setSearchTerm(e.target.value);

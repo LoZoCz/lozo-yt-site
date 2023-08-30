@@ -14,7 +14,7 @@ export const Home = () => {
   }, [selectedCategory]);
 
   return (
-    <main className="flex p-1 gap-4 bg-neutral-900 text-white h-full">
+    <main className="relative flex flex-col p-0 gap-2 lg:gap-4 bg-neutral-900 text-white h-full lg:flex-row">
       <SideBar
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}

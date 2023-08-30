@@ -33,9 +33,9 @@ export const VideoDetails = () => {
   } = videoDetails;
 
   return (
-    <main className="flex px-2 pb-2 gap-4 bg-neutral-900 text-white relative">
+    <main className="flex flex-col px-2 pb-2 gap-4 bg-neutral-900 text-white relative md:flex-row">
       <div
-        className="sticky top-16 w-4/5 grid"
+        className="static top-16 w-full grid md:sticky md:w-4/5"
         style={{ gridTemplateRows: `1fr 6.5rem`, height: `calc(100vh - 6rem)` }}
       >
         <div className="w-full">
@@ -64,8 +64,8 @@ export const VideoDetails = () => {
           </div>
         </div>
       </div>
-      <div className="w-1/5">
-        <Videos videos={videos} columns={1} />
+      <div className="w-full md:w-1/5">
+        <Videos videos={videos} columns={1} recommended={1} />
       </div>
     </main>
   );

@@ -19,7 +19,6 @@ export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
   { name: "New", icon: <FontAwesomeIcon icon={faHouse} /> },
-  { name: "JS Mastery", icon: <FontAwesomeIcon icon={faCode} /> },
   { name: "Coding", icon: <FontAwesomeIcon icon={faCode} /> },
   { name: "ReactJS", icon: <FontAwesomeIcon icon={faCode} /> },
   { name: "NextJS", icon: <FontAwesomeIcon icon={faCode} /> },
